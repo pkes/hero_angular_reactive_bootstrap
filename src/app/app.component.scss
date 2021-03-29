@@ -1,0 +1,36 @@
+/* AppComponent's private CSS styles */
+h1 {
+  margin-bottom: 0;
+}
+nav a {
+  padding: 1rem;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #42545c;
+}
+nav a.active {
+  background-color: black;
+}
+/* You can add global styles to this file, and also import other style files */
+a {
+  cursor: pointer;
+}
+
+.app-container {
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.btn-delete-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}

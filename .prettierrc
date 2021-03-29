@@ -1,0 +1,33 @@
+{
+  "endOfLine": "auto",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["src/**/*.scss", "src/**/*.css"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.md"],
+      "options": {
+        "tabWidth": 1
+      }
+    },
+    {
+      "files": ["*.json"],
+      "options": {
+        "printWidth": 999
+      }
+    },
+    {
+      "files": ["*.html"],
+      "options": {
+        "printWidth": 120
+      }
+    }
+  ]
+}

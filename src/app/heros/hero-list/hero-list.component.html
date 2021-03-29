@@ -1,0 +1,32 @@
+<h1>Heros</h1>
+<a routerLink="hero" class="btn btn-sm btn-success mb-2">Crear Hero</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="width: 20%">ID</th>
+      <th style="width: 80%">Hero-Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of heros">
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+      <td style="white-space: nowrap">
+        <a routerLink="hero/{{ hero.id }}" class="btn btn-sm btn-primary mr-1">Editar</a>
+        <button
+          (click)="deleteHero(hero.id)"
+          class="btn btn-sm btn-danger btn-delete-hero"
+          [disabled]="hero.isDeleting"
+        >
+          <span *ngIf="hero.isDeleting" class="spinner-border spinner-border-sm"></span>
+          <span *ngIf="!hero.isDeleting">Borrar</span>
+        </button>
+      </td>
+    </tr>
+    <tr *ngIf="!heros">
+      <td colspan="4" class="text-center">
+        <span class="spinner-border spinner-border-lg align-center"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
